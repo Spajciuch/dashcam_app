@@ -11,10 +11,10 @@ writer = cv2.VideoWriter("test_video.mp4", cv2.VideoWriter_fourcc(*'DIVX'), fps,
 while(True):
     ret, frame = vid.read()
 
-    cv2.putText(frame, "COOOO NIEMOŻLIWE")
+    editedFrame = cv2.putText(frame, "COOOO NIEMOŻLIWE", (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2, cv2.LINE_AA)
 
-    cv2.imshow("frame", frame)
-    writer.write(frame)
+    cv2.imshow("Webcam Preview", editedFrame)
+    writer.write(editedFrame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
