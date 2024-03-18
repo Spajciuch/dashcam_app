@@ -50,7 +50,7 @@ while(True):
 
     editedFrame = cv2.putText(frame, current_time, position, font, scale, color, thickness, lineType)
 
-    cv2.imshow("Webcam Preview", editedFrame)
+    # cv2.imshow("Webcam Preview", editedFrame)
     writer.write(editedFrame)
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
